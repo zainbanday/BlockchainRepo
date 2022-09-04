@@ -1,0 +1,9 @@
+This contract introduces some new concepts, let us go through them one by one.
+The line address public minter; declares a state variable of type address. 
+The address type is a 160-bit value that does not allow any arithmetic operations. 
+It is suitable for storing addresses of contracts, or a hash of the public half of a keypair belonging to external accounts.
+The keyword public automatically generates a function that allows you to access the current value of the state variable from outside of the contract. 
+Without this keyword, other contracts have no way to access the variable. 
+Mappings can be seen as hash tables which are virtually initialised such that every possible key exists from the start and is mapped to a value whose byte-representation is all zeros. 
+However, it is neither possible to obtain a list of all keys of a mapping, nor a list of all values. 
+Record what you added to the mapping, or use it in a context where this is not needed. Or even better, keep a list, or use a more suitable data type.
